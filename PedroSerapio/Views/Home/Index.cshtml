@@ -1,0 +1,56 @@
+﻿@model HomeModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="text-center">
+    
+    <img src="/images/meDev.png" alt="me :)" class="img-fluid" />
+    <h1 class="display-4" id="demo"></h1><br />
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a href="https://wa.me/+351969152132" class="fa fa-whatsapp"></a>
+        </li>
+        <li class="list-inline-item">
+            <a href="tel:+351969152132" class="fa fa-phone"></a>
+        </li>
+        <li class="list-inline-item">
+            <a href="mailto:serapio.pedro@outlook.pt" class="fa fa-envelope"></a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/pedro-serapio" class="fa fa-linkedin"></a>
+        </li>
+        <li class="list-inline-item">
+            <a href="https://www.twitter.com/PedroSerapio" class="fa fa-twitter"></a>
+        </li>
+
+
+    </ul>
+
+    <a id="projects">
+    <img src="/images/underConstruction.png" alt="Under Construction" class="img-fluid" />
+    </a>
+    
+</div>
+
+
+
+@* This script make the effect literally write :) *@
+
+<script>
+    var i = 0;
+    var txt = "Hello, I'm Pedro Serápio";
+    var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+    // only proceed after DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        typeWriter();
+    });
+</script>
